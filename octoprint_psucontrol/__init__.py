@@ -76,7 +76,7 @@ class PSUControl(octoprint.plugin.StartupPlugin,
     def __init__(self):
         try:
             global GPIO
-            import RPi.GPIO as GPIO
+            import OPi.GPIO as GPIO
             self._hasGPIO = True
         except (ImportError, RuntimeError):
             self._hasGPIO = False
@@ -266,9 +266,9 @@ class PSUControl(octoprint.plugin.StartupPlugin,
             self._logger.error("RPi.GPIO is required.")
             return
         
-        self._logger.info("Running RPi.GPIO version %s" % GPIO.VERSION)
-        if GPIO.VERSION < "0.6":
-            self._logger.error("RPi.GPIO version 0.6.0 or greater required.")
+        #self._logger.info("Running RPi.GPIO version %s" % GPIO.VERSION)
+       # if GPIO.VERSION < "0.6":
+            #self._logger.error("RPi.GPIO version 0.6.0 or greater required.")
         
         GPIO.setwarnings(False)
 
@@ -759,12 +759,12 @@ class PSUControl(octoprint.plugin.StartupPlugin,
 
                 # version check: github repository
                 type="github_release",
-                user="kantlivelong",
+                user="mqttnodered",
                 repo="OctoPrint-PSUControl",
                 current=self._plugin_version,
 
                 # update method: pip w/ dependency links
-                pip="https://github.com/kantlivelong/OctoPrint-PSUControl/archive/{target_version}.zip"
+                pip="https://github.com/mqttnodered/OctoPrint-PSUControl/archive/{target_version}.zip"
             )
         )
 
