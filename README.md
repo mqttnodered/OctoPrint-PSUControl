@@ -1,4 +1,6 @@
-# OctoPrint PSU Control
+# OctoPrint PSU Control- Orange Pi
+Modified to work with Orange Pi One, but will most likley work with other models.
+
 This OctoPrint plugin controls an ATX/AUX power supply to help reduce power consumption and noise when the printer is not in use.
 
 Power supply can be automatically switched on when user specified commands are sent to the printer and/or switched off when idle.
@@ -9,7 +11,10 @@ Supports Commands (G-Code or System) or GPIO to switch power supply on/off.
  
  
 ## Setup
-Install the plugin using Plugin Manager from Settings
+Install the plugin using Plugin Manager and manual URL input from Settings.
+Requires OPi.GPIO package. Install with ~/OctoPrint/venv/bin$ sudo pip install --upgrade OPi.GPIO 
+Further instructions (https://opi-gpio.readthedocs.io/en/latest/api-documentation.html).
+
  
 ## Settings
 See the [Wiki](https://github.com/kantlivelong/OctoPrint-PSUControl/wiki/Settings)
