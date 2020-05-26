@@ -12,7 +12,9 @@ Supports Commands (G-Code or System) or GPIO to switch power supply on/off.
  
 ## Setup
 Install the plugin using Plugin Manager and manual URL input from Settings.
-Requires OPi.GPIO package. Install with ~/OctoPrint/venv/bin$ sudo pip install --upgrade OPi.GPIO 
+
+Requires OPi.GPIO package. Install with ~/OctoPrint/venv/bin$ sudo pip install --upgrade OPi.GPIO
+
 Further instructions [API Documentation](https://opi-gpio.readthedocs.io/en/latest/api-documentation.html).
 
  
